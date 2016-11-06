@@ -1,3 +1,8 @@
+<div>
+    <strong>number of results:</strong> {{totalResults}}
+    <br>
+    <strong>number of pages:</strong> {{numberOfPages}}
+</div>
 <pagination [currentPage]='currentPage' [numberOfPages]='numberOfPages' (notify)='onNotify($event)'></pagination>
 <div *ngIf="beers">
         <div *ngFor="let beer of beers" class="col-md-3">

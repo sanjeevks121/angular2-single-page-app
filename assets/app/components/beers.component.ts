@@ -11,12 +11,12 @@ export class BeersComponent {
     beers: any[];
     currentPage = 1;
     numberOfPages:number;
-
-
+    totalResults:number;
 
     constructor(private _beerService : BeerService){
         this._beerService.getBeers().subscribe(beers => {
             this.numberOfPages =  beers.data.numberOfPages;
+            this.totalResults =  beers.data.totalResults;
             this.beers =  beers.data.data;
         });
     }
