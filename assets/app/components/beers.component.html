@@ -1,0 +1,24 @@
+<pagination [currentPage]='currentPage' [numberOfPages]='numberOfPages' (notify)='onNotify($event)'></pagination>
+<div *ngIf="beers">
+        <div *ngFor="let beer of beers" class="col-md-3">
+            <div class="card">
+
+                <div *ngIf="beer.labels && beer.labels.medium">
+                    <img class="img-fluid" src="{{beer.labels.medium}}">
+                </div>
+                <div *ngIf="!beer.labels || !beer.labels.medium">
+                    <img class="img-fluid" src="http://placehold.it/250x250">
+                </div>
+
+                <div class="card-block">
+
+                    <span class="card-title">{{beer.name.slice(0,20)}}</span>
+
+                    <a routerLink="/profile/{{beer.id}}" class="btn btn-primary btn-block">Profile</a>
+                </div>
+
+
+            </div>
+        </div>
+</div>
+

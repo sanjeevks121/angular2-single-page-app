@@ -1,0 +1,7 @@
+<div>
+    <strong>current page:</strong> {{currentPage}}
+    <strong>number of pages:</strong> {{numberOfPages}}
+</div>
+<ul class="pagination">
+    <li *ngFor="let number of [0,1,2,3,4]" (click)='onClick(number)'><a href="#">{{number}}</a></li>
+</ul>

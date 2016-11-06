@@ -1,0 +1,45 @@
+<div *ngIf="beer">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">{{beer.name}}</h3>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-4">
+                    <div *ngIf="beer.labels && beer.labels.medium">
+                        <img class="img-thumbnail" src="{{beer.labels.medium}}">
+                    </div>
+                    <div *ngIf="!beer.labels || !beer.labels.medium">
+                        <img src="http://placehold.it/250x250">
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="stats">
+                        <span class="label label-default">ABV: {{beer.abv}}%</span>
+                        <span class="label label-primary">{{beer.ibu}} IBU</span>
+                        <span class="label label-success">{{beer.isOrganic === "N" ? "Not" : "Yes"}} organic</span>
+                        <span class="label label-info">{{beer.status}}</span>
+                    </div>
+                    <br>
+                    <ul class="list-group">
+                        <li class="list-group-item"><strong>Category: </strong>{{beer.style.category.name}}</li>
+                        <li class="list-group-item"><strong>Style: </strong>{{beer.style.shortName}}</li>
+                        <li class="list-group-item"><strong>Id: </strong>{{beer.id}}</li>
+                        <li class="list-group-item"><strong>Original Gravity: </strong>{{beer.originalGravity}}</li>
+                        <li class="list-group-item"><strong>Creation date: </strong>{{beer.createDate}}</li>
+                        <li class="list-group-item"><strong>Update date: </strong>{{beer.updateDate}}</li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    {{beer.description}}
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
