@@ -5,9 +5,9 @@ Single Page App with Angular2 • Node.js• brewerydb API
 
 Using brewerydb REST API http://www.brewerydb.com/developers/docs
 
-![screenshot](/main.png)
+![screenshot](/main.JPG)
 
-![screenshot](/profile.png "Profile")
+![screenshot](/profile.JPG "Profile")
 
 Stack
 -----
