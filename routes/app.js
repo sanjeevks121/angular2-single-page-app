@@ -3,7 +3,7 @@ var router = express.Router();
 var request = require('request');
 
 const apiUrl = 'http://api.brewerydb.com/v2';
-const apiKey = '7d7b663eb88d36cec2e23cdea58a9cb4';
+const apiKey = '3d2c166f5552dcc3beba00983f6507fd';
 
 router.get('/', function (req, res, next) {
     res.render('index');
